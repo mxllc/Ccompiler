@@ -1,0 +1,47 @@
+Follow¼¯ºÏ£º
+Actual_parameter_list: )
+Add_expression: != ) , ; < <= == > >= 
+Add_expression_loop: ( identifier num 
+Assign_sentence: identifier if return while } 
+Call_func: != ) * + , - / ; < <= == > >= 
+Call_func_check: ( ) identifier num 
+Const_value: != ) * + , - / ; < <= == > >= 
+Create_Function_table: (
+Exit_Function_table: # int void 
+Expression: ) , ; 
+Expression_loop: ( identifier num 
+FTYPE: != ) * + , - / ; < <= == > >= 
+Factor: != ) * + , - / ; < <= == > >= 
+Factor_loop: ( identifier num 
+Formal_parameter: )
+Formal_parameter_list: )
+Function_stmt: # int void 
+If_expression: identifier if return while } 
+If_sentence: identifier if return while } 
+If_sentence_m0: (
+If_sentence_m1: {
+If_sentence_n: else
+Internal_stmt: identifier if return while 
+Internal_variable_stmt: ;
+Item: != ) + , - ; < <= == > >= 
+Item_loop: ( identifier num 
+Parameter: ) , 
+Parameter_loop: int
+Program: #
+Relop: ( identifier num 
+Return_expression: ;
+Return_sentence: identifier if return while } 
+Sentence: identifier if return while } 
+Sentence_block: # else identifier if int return void while } 
+Sentence_block_m: {
+Sentence_loop: identifier if return while 
+Sentence_string: }
+Start: #
+Stmt: # int void 
+Stmt_loop: int void 
+Stmt_string: #
+Stmt_type: # int void 
+Variavle_stmt: # int void 
+While_sentence: identifier if return while } 
+While_sentence_m1: (
+While_sentence_m2: {

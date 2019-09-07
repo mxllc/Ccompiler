@@ -1,0 +1,47 @@
+First¼¯ºÏ£º
+Actual_parameter_list: $ ( identifier num 
+Add_expression: ( identifier num 
+Add_expression_loop: $ ( identifier num 
+Assign_sentence: identifier
+Call_func: (
+Call_func_check: $
+Const_value: num
+Create_Function_table: $
+Exit_Function_table: $
+Expression: ( identifier num 
+Expression_loop: $ ( identifier num 
+FTYPE: $ ( 
+Factor: ( identifier num 
+Factor_loop: $ ( identifier num 
+Formal_parameter: $ int void 
+Formal_parameter_list: int
+Function_stmt: (
+If_expression: $ else 
+If_sentence: if
+If_sentence_m0: $
+If_sentence_m1: $
+If_sentence_n: $
+Internal_stmt: $ int 
+Internal_variable_stmt: int
+Item: ( identifier num 
+Item_loop: $ ( identifier num 
+Parameter: int
+Parameter_loop: $ int 
+Program: int void 
+Relop: != < <= == > >= 
+Return_expression: $ ( identifier num 
+Return_sentence: return
+Sentence: identifier if return while 
+Sentence_block: {
+Sentence_block_m: $
+Sentence_loop: $ identifier if return while 
+Sentence_string: identifier if return while 
+Start: int void 
+Stmt: int void 
+Stmt_loop: $ int void 
+Stmt_string: int void 
+Stmt_type: ( ; 
+Variavle_stmt: ;
+While_sentence: while
+While_sentence_m1: $
+While_sentence_m2: $

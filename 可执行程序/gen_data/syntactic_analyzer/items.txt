@@ -1,0 +1,194 @@
+LR0�酊殖�
+Start->， Program 
+Start->Program ，
+Program->， Stmt_string 
+Program->Stmt_string ，
+Stmt_string->， Stmt_loop Stmt 
+Stmt_string->Stmt_loop ， Stmt 
+Stmt_string->Stmt_loop Stmt ，
+Stmt_loop->， Stmt_loop Stmt 
+Stmt_loop->Stmt_loop ， Stmt 
+Stmt_loop->Stmt_loop Stmt ，
+Stmt_loop->，
+Stmt->， int identifier Stmt_type 
+Stmt->int ， identifier Stmt_type 
+Stmt->int identifier ， Stmt_type 
+Stmt->int identifier Stmt_type ，
+Stmt->， void identifier Create_Function_table Function_stmt 
+Stmt->void ， identifier Create_Function_table Function_stmt 
+Stmt->void identifier ， Create_Function_table Function_stmt 
+Stmt->void identifier Create_Function_table ， Function_stmt 
+Stmt->void identifier Create_Function_table Function_stmt ，
+Stmt_type->， Variavle_stmt 
+Stmt_type->Variavle_stmt ，
+Stmt_type->， Create_Function_table Function_stmt 
+Stmt_type->Create_Function_table ， Function_stmt 
+Stmt_type->Create_Function_table Function_stmt ，
+Create_Function_table->，
+Variavle_stmt->， ; 
+Variavle_stmt->; ，
+Function_stmt->， ( Formal_parameter ) Sentence_block Exit_Function_table 
+Function_stmt->( ， Formal_parameter ) Sentence_block Exit_Function_table 
+Function_stmt->( Formal_parameter ， ) Sentence_block Exit_Function_table 
+Function_stmt->( Formal_parameter ) ， Sentence_block Exit_Function_table 
+Function_stmt->( Formal_parameter ) Sentence_block ， Exit_Function_table 
+Function_stmt->( Formal_parameter ) Sentence_block Exit_Function_table ，
+Exit_Function_table->，
+Formal_parameter->， Formal_parameter_list 
+Formal_parameter->Formal_parameter_list ，
+Formal_parameter->， void 
+Formal_parameter->void ，
+Formal_parameter->，
+Formal_parameter_list->， Parameter_loop Parameter 
+Formal_parameter_list->Parameter_loop ， Parameter 
+Formal_parameter_list->Parameter_loop Parameter ，
+Parameter_loop->， Parameter_loop Parameter , 
+Parameter_loop->Parameter_loop ， Parameter , 
+Parameter_loop->Parameter_loop Parameter ， , 
+Parameter_loop->Parameter_loop Parameter , ，
+Parameter_loop->，
+Parameter->， int identifier 
+Parameter->int ， identifier 
+Parameter->int identifier ，
+Sentence_block->， Sentence_block_m { Internal_stmt Sentence_string } 
+Sentence_block->Sentence_block_m ， { Internal_stmt Sentence_string } 
+Sentence_block->Sentence_block_m { ， Internal_stmt Sentence_string } 
+Sentence_block->Sentence_block_m { Internal_stmt ， Sentence_string } 
+Sentence_block->Sentence_block_m { Internal_stmt Sentence_string ， } 
+Sentence_block->Sentence_block_m { Internal_stmt Sentence_string } ，
+Sentence_block_m->，
+Internal_stmt->，
+Internal_stmt->， Internal_variable_stmt ; Internal_stmt 
+Internal_stmt->Internal_variable_stmt ， ; Internal_stmt 
+Internal_stmt->Internal_variable_stmt ; ， Internal_stmt 
+Internal_stmt->Internal_variable_stmt ; Internal_stmt ，
+Internal_variable_stmt->， int identifier 
+Internal_variable_stmt->int ， identifier 
+Internal_variable_stmt->int identifier ，
+Sentence_string->， Sentence_loop Sentence 
+Sentence_string->Sentence_loop ， Sentence 
+Sentence_string->Sentence_loop Sentence ，
+Sentence_loop->， Sentence_loop Sentence 
+Sentence_loop->Sentence_loop ， Sentence 
+Sentence_loop->Sentence_loop Sentence ，
+Sentence_loop->，
+Sentence->， If_sentence 
+Sentence->If_sentence ，
+Sentence->， While_sentence 
+Sentence->While_sentence ，
+Sentence->， Return_sentence 
+Sentence->Return_sentence ，
+Sentence->， Assign_sentence 
+Sentence->Assign_sentence ，
+Assign_sentence->， identifier = Expression ; 
+Assign_sentence->identifier ， = Expression ; 
+Assign_sentence->identifier = ， Expression ; 
+Assign_sentence->identifier = Expression ， ; 
+Assign_sentence->identifier = Expression ; ，
+Return_sentence->， return Return_expression ; 
+Return_sentence->return ， Return_expression ; 
+Return_sentence->return Return_expression ， ; 
+Return_sentence->return Return_expression ; ，
+Return_expression->，
+Return_expression->， Expression 
+Return_expression->Expression ，
+While_sentence->， while While_sentence_m1 ( Expression ) While_sentence_m2 Sentence_block 
+While_sentence->while ， While_sentence_m1 ( Expression ) While_sentence_m2 Sentence_block 
+While_sentence->while While_sentence_m1 ， ( Expression ) While_sentence_m2 Sentence_block 
+While_sentence->while While_sentence_m1 ( ， Expression ) While_sentence_m2 Sentence_block 
+While_sentence->while While_sentence_m1 ( Expression ， ) While_sentence_m2 Sentence_block 
+While_sentence->while While_sentence_m1 ( Expression ) ， While_sentence_m2 Sentence_block 
+While_sentence->while While_sentence_m1 ( Expression ) While_sentence_m2 ， Sentence_block 
+While_sentence->while While_sentence_m1 ( Expression ) While_sentence_m2 Sentence_block ，
+While_sentence_m1->，
+While_sentence_m2->，
+If_sentence->， if If_sentence_m0 ( Expression ) If_sentence_m1 Sentence_block If_expression 
+If_sentence->if ， If_sentence_m0 ( Expression ) If_sentence_m1 Sentence_block If_expression 
+If_sentence->if If_sentence_m0 ， ( Expression ) If_sentence_m1 Sentence_block If_expression 
+If_sentence->if If_sentence_m0 ( ， Expression ) If_sentence_m1 Sentence_block If_expression 
+If_sentence->if If_sentence_m0 ( Expression ， ) If_sentence_m1 Sentence_block If_expression 
+If_sentence->if If_sentence_m0 ( Expression ) ， If_sentence_m1 Sentence_block If_expression 
+If_sentence->if If_sentence_m0 ( Expression ) If_sentence_m1 ， Sentence_block If_expression 
+If_sentence->if If_sentence_m0 ( Expression ) If_sentence_m1 Sentence_block ， If_expression 
+If_sentence->if If_sentence_m0 ( Expression ) If_sentence_m1 Sentence_block If_expression ，
+If_expression->，
+If_expression->， If_sentence_n else Sentence_block 
+If_expression->If_sentence_n ， else Sentence_block 
+If_expression->If_sentence_n else ， Sentence_block 
+If_expression->If_sentence_n else Sentence_block ，
+If_sentence_m0->，
+If_sentence_m1->，
+If_sentence_n->，
+Expression->， Add_expression_loop Add_expression 
+Expression->Add_expression_loop ， Add_expression 
+Expression->Add_expression_loop Add_expression ，
+Add_expression_loop->，
+Add_expression_loop->， Add_expression_loop Add_expression Relop 
+Add_expression_loop->Add_expression_loop ， Add_expression Relop 
+Add_expression_loop->Add_expression_loop Add_expression ， Relop 
+Add_expression_loop->Add_expression_loop Add_expression Relop ，
+Relop->， < 
+Relop->< ，
+Relop->， <= 
+Relop-><= ，
+Relop->， > 
+Relop->> ，
+Relop->， >= 
+Relop->>= ，
+Relop->， == 
+Relop->== ，
+Relop->， != 
+Relop->!= ，
+Add_expression->， Item_loop Item 
+Add_expression->Item_loop ， Item 
+Add_expression->Item_loop Item ，
+Item_loop->，
+Item_loop->， Item_loop Item + 
+Item_loop->Item_loop ， Item + 
+Item_loop->Item_loop Item ， + 
+Item_loop->Item_loop Item + ，
+Item_loop->， Item_loop Item - 
+Item_loop->Item_loop ， Item - 
+Item_loop->Item_loop Item ， - 
+Item_loop->Item_loop Item - ，
+Item->， Factor_loop Factor 
+Item->Factor_loop ， Factor 
+Item->Factor_loop Factor ，
+Factor_loop->，
+Factor_loop->， Factor_loop Factor * 
+Factor_loop->Factor_loop ， Factor * 
+Factor_loop->Factor_loop Factor ， * 
+Factor_loop->Factor_loop Factor * ，
+Factor_loop->， Factor_loop Factor / 
+Factor_loop->Factor_loop ， Factor / 
+Factor_loop->Factor_loop Factor ， / 
+Factor_loop->Factor_loop Factor / ，
+Factor->， Const_value 
+Factor->Const_value ，
+Factor->， ( Expression ) 
+Factor->( ， Expression ) 
+Factor->( Expression ， ) 
+Factor->( Expression ) ，
+Factor->， identifier FTYPE 
+Factor->identifier ， FTYPE 
+Factor->identifier FTYPE ，
+FTYPE->， Call_func 
+FTYPE->Call_func ，
+FTYPE->，
+Call_func->， ( Call_func_check Actual_parameter_list ) 
+Call_func->( ， Call_func_check Actual_parameter_list ) 
+Call_func->( Call_func_check ， Actual_parameter_list ) 
+Call_func->( Call_func_check Actual_parameter_list ， ) 
+Call_func->( Call_func_check Actual_parameter_list ) ，
+Call_func_check->，
+Actual_parameter_list->，
+Actual_parameter_list->， Expression_loop Expression 
+Actual_parameter_list->Expression_loop ， Expression 
+Actual_parameter_list->Expression_loop Expression ，
+Expression_loop->，
+Expression_loop->， Expression_loop Expression , 
+Expression_loop->Expression_loop ， Expression , 
+Expression_loop->Expression_loop Expression ， , 
+Expression_loop->Expression_loop Expression , ，
+Const_value->， num 
+Const_value->num ，

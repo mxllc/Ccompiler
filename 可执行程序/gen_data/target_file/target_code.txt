@@ -1,0 +1,95 @@
+lui $sp 0x1001 
+lui $gp 0x1000 
+j main  
+fac :
+#创建栈帧
+sw $ra ($sp) 
+sw $fp 4($sp) 
+addi $fp $sp 4
+addi $sp $sp 8
+
+
+addi $sp $sp 4
+
+#if判断
+lw $t0 4096($gp) 
+lw $t1 -8($fp) 
+move $t0 $t1 
+addi $t2 $zero 1
+sle $t0 $t0 $t2
+sw $t1 -8($fp) 
+beq $t0 $zero Label_fac_if_end_0
+addi $t3 $zero 1
+lw $t4 4($fp) 
+move $t4 $t3 
+sw $t4 4($fp) 
+j Label_fac_else_end_0  
+Label_fac_if_end_0 :
+lw $t5 4108($gp) 
+lw $t6 -8($fp) 
+move $t5 $t6 
+addi $t7 $zero 1
+sub $t5 $t5 $t7
+sw $t5 ($sp) 
+addi $sp $sp 4
+sw $t6 -8($fp) 
+jal fac
+move $sp $fp 
+lw $fp ($fp) 
+addi $sp $sp -8
+lw $t8 4116($gp) 
+move $t8 $v0 
+lw $t9 4120($gp) 
+lw $t0 -8($fp) 
+move $t9 $t0 
+mult $t8 $t9 
+mflo $t8  
+lw $t1 4($fp) 
+move $t1 $t8 
+sw $t0 -8($fp) 
+sw $t1 4($fp) 
+Label_fac_else_end_0 :
+lw $t2 4124($gp) 
+lw $t3 4($fp) 
+move $t2 $t3 
+move $v0 $t2 
+lw $ra -4($fp) 
+sw $t3 4($fp) 
+jr $ra  
+main :
+#创建栈帧
+sw $ra ($sp) 
+sw $fp 4($sp) 
+addi $fp $sp 4
+addi $sp $sp 8
+
+
+addi $sp $sp 4
+addi $sp $sp 4
+addi $sp $sp 4
+addi $t4 $zero 3
+lw $t5 4($fp) 
+move $t5 $t4 
+lw $t6 4132($gp) 
+move $t6 $t5 
+sw $t6 ($sp) 
+addi $sp $sp 4
+sw $t5 4($fp) 
+jal fac
+move $sp $fp 
+lw $fp ($fp) 
+addi $sp $sp -8
+lw $t7 4136($gp) 
+move $t7 $v0 
+sw $t7 ($sp) 
+addi $sp $sp 4
+jal fac
+move $sp $fp 
+lw $fp ($fp) 
+addi $sp $sp -8
+lw $t0 4140($gp) 
+move $t0 $v0 
+lw $t1 4($fp) 
+move $t1 $t0 
+sw $t1 4($fp) 
+syscall
